@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+
+#first_page {
+  height: 100%;
+  padding: 20% 0px 0px 90px;
+  background: no-repeat url("background-1.svg");
+  background-size: cover;
+  font-family: "Poppins";
+}
+
+#first_page h4 {
+  color: rgb(223, 226, 230);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+#first_page h1 {
+  color: rgb(255, 255, 255);
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 0.95;
+}
+#first_page h2 {
+  margin: 0px 0px 0px 29.7%;
+  color: rgb(223, 226, 230);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.25;
+}
+
+
+
+#second_page{
+  height: 100%;
+}
