@@ -66,6 +66,7 @@ html,body {
   background: no-repeat url("background-2.svg");
   background-size: cover;
   font-family: "Poppins";
+  text-align: right;
 }
 
 #second_page h1 {
@@ -77,7 +78,7 @@ html,body {
 #second_page p {
   margin: 0px 0px 0px 29.7%;
   color: rgb(223, 226, 230);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   line-height: 2.25;
 }
