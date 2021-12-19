@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;900&display=swap');
+
+
+html{
+    width:100%;
+    height:100%;
+    background: radial-gradient(350.61% 186.89% at 59.48% -21.63%, #091D45 0%, #070332 87.97%, #070332 91.15%);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #091D45;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1b97c0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #25C8FF;
+}
