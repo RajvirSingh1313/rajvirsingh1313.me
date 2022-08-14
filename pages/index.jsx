@@ -9,7 +9,7 @@ export default function Home() {
         <div className="sm:w-1/2 sm:pt-32 flex flex-col lg:pl-10 font-bold">
           <h3 className="text-2xl">Hey There,</h3>
           <h1 className="text-6xl lg:text-7xl xl:text-8xl text-activeBlue mb-4">Rajvir Singh</h1>
-          <p className="sm:text-2xl lg:text-3xl font-normal break-words w-3/4 mb-4">Software Developer. Freelancer. Writer. Startup & Tech Enthusiastic</p>
+          <p className="sm:text-2xl lg:text-3xl font-normal break-words w-3/4 mb-4">Software Developer, Freelancer, Writer, Startup & Tech Enthusiastic</p>
           <IconsRow />
         </div>
 

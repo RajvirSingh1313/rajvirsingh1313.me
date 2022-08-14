@@ -34,6 +34,18 @@ export default function Layout({children}) {
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
 
+                <meta
+                    property="twitter:og:title"
+                    content="Rajvir Singh, A software developer, freelancer, writer and startup / tech enthusiastic"
+                />
+                <meta property="twitter:og:description" content="Available for work" />
+                <meta
+                    property="twitter:og:image"
+                    content="/OG Image.png"
+                />
+                <meta property="twitter:og:image:width" content="1200" />
+                <meta property="twitter:og:image:height" content="630" />
+
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
