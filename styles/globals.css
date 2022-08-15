@@ -17,34 +17,61 @@ body {
 
 .HomeHero {
   background-size: cover;
-  background-image: url(/HomeHero.svg);
+  background-image: url(/HeroPatterns/HomeHero.svg);
   background-repeat: no-repeat;
   background-position: left;
 }
 .AboutHero {
   background-size: cover;
-  background-image: url(/AboutHero.svg);
+  background-image: url(/HeroPatterns/AboutHero.svg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
+}
+.TalkHero {
+  background-size: cover;
+  background-image: url(/HeroPatterns/TalkHero.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.WorkHero {
+  background-size: cover;
+  background-image: url(/HeroPatterns/WorkHero.svg);
+  background-repeat: no-repeat;
+  background-position: left;
 }
 @media only screen and (min-width: 770px) {
   .HomeHero {
     background-size: contain;
-    background-image: url(/HomeHero.svg);
+    background-image: url(/HeroPatterns/HomeHero.svg);
     background-repeat: no-repeat;
     background-position: left;
   }
   .AboutHero {
-    background-size: 50%;
-    background-image: url(/AboutHero.svg);
+    background-size: 60%;
+    background-image: url(/HeroPatterns/AboutHero.svg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right bottom;
+  }
+  .TalkHero {
+    background-size: 60%;
+    background-image: url(/HeroPatterns/TalkHero.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  .WorkHero {
+    background-size: 60%;
+    background-image: url(/HeroPatterns/WorkHero.svg);
+    background-repeat: no-repeat;
+    background-position: left;
   }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components{
+  a {
+    color: inherit;
+    text-decoration: none;
+    @apply text-activeBlue hover:underline hover:text-white hover:bg-activeBlue cursor-pointer;
+  }
 }
 
 * {
