@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function work() {
   return (
-    <main className="WorkHero px-10 xl:px-24 sm:py-10 text-2xl h-5/6">
+    <main className="WorkHero overflow-hidden scroll-none px-10 xl:px-24 sm:py-10 text-2xl h-screen lg:h-5/6">
       <div className="flex w-full h-full">
         <div className="flex flex-col w-full lg:w-1/2 h-full pt-32">
           <h1 className="text-activeBlue font-bold text-8xl">Work</h1>
@@ -13,8 +13,7 @@ export default function work() {
         </div>
         <div className="hidden lg:flex w-1/2 justify-center">
           <img
-            className='scale-125'
-            src="/Me.svg"
+            src="/CubesWork.svg"
             alt="My Picture"
           />
         </div>
