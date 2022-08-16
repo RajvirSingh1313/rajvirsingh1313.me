@@ -1,6 +1,6 @@
 import "../styles/globals.css";
-import Layout from "../components/Layout";
 import dynamic from "next/dynamic";
+import Layout from "../components/Layout";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -16,9 +16,9 @@ function MyApp({ Component, pageProps }) {
         innerScale={1}
         outerScale={1.5}
         outerAlpha={0}
-        trailingSpeed={8}
+        trailingSpeed={4}
         outerStyle={{
-          border: "3px solid #25C8FF"
+          border: "3px solid #25C8FF",
         }}
         clickables={[
           "a",
