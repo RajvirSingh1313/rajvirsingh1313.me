@@ -1,0 +1,64 @@
+---
+title: Starter Code Generator for Electron with Vue or React
+date: 'September 17, 2021'
+tags: [react, vue, electron, project]
+---
+
+# What is Elecrue?
+
+![](https://c.tenor.com/nzzFgcBtCsUAAAAC/let-me-get-this-straight-patrick-heusinger.gif)
+> First of all let me tell you the main point of this elecrue thing.
+
+**_[Elecrue](https://www.npmjs.com/package/elecrue) is a boilerplate generator npm package, it generates the boiler code for electron with react or vue with tailwindcss._**
+
+Elecrue provides you following starter code templates:-
+1. React-Electron-JS
+2. React-Electron-TS
+3. React-Electron-Tailwindcss-JS
+4. React-Electron-Tailwindcss-TS
+5. Vue-Electron-JS
+
+# How to install Elecure?
+```
+npm i -g elecrue
+```
+
+# How to use it?
+It is pretty straight forward to use it. Type `elecrue` in your command line. It will ask you for choosing a template, after choosing the template. It will ask you the name of the project name, after typing the name. Elecrue will download all the node packages in your project folder. Ta-da! You are ready to rock! 🎉
+
+![Elecrue Terminal](https://user-images.githubusercontent.com/63385587/132942925-bbd9a3db-63c9-4cd3-be4b-45ab6a9749ef.png)
+
+# FAQs
+
+## 1.) Why Elecrue doesn't use IPC?
+Let me break this down, Why didn't I used IPC.
+
+### What is IPC?
+IPC is a set of two things, [ipcMain](https://www.electronjs.org/docs/api/ipc-main) & [ipcRenderer](https://www.electronjs.org/docs/api/ipc-renderer). They both helps to send signals and receive from electron to receiver, by doing this you can get some information from electron to react or vue. As React and Vue are restricted to src folders only.
+
+### Why didn't I used IPC?
+As I above paragraph, I explained that both react & vue, can't go outside of src folder. So most people use IPC in most ideal conditions. But IPC can be tedious to work with.
+
+For example, If you want to create a file with one click of a button. It might sound easy, but it is hard to execute, as the button is in react, but you can't set the function to create a file in react as react is a client-side technology. But electron can do it easily with the `fs` module from the node, but we also need to create the file when the button is clicked. So how will we connect this? IPC would right?. Nope, Ipc is a heck alot of work and chances are low for it to work (For me at least).
+
+> If boil the problem down, we need to trigger the function in electron, which is to create a file.
+
+The solution to this problem I found was, To host an express server in electron on `localhost:5001` (If I remember correctly). And set up an endpoint for creating the file, Like `/create-file`. So when the button will be clicked in react, `onClick` will fetch the `localhost:5001/create-file` triggering the function to create a file in electron, as the only electron can use `fs`.
+
+## 2.) Is there would be any future updates?
+Yes, I will maintain the project and will update it when if any of the used libraries are updated.
+
+## 3.) Am I am going to add more templates?
+Yes, But depending on your suggestions. You can comment on this blog, about the template you want like svelte with electron. Or you can make an issue on [Elecrue's Github Repo](https://github.com/RajvirSingh1313/elecrue)
+
+![](https://c.tenor.com/Cefhsn3O0XwAAAAC/homer-thesimpsons.gif)
+# Got to go
+I hope you liked the Elecrue. **Star it on** [**Github**](https://github.com/RajvirSingh1313/elecrue) 🌟.
+
+I also hope you understand, Why I didn't use IPC. If you have any doubts ask me in the comments, I will surely reply. And if you wanna learn new things with others, or looking to work on some cool projects, check out [ByteSlash Discord Server](https://discord.gg/3MQWD47d), it is an awesome community to grow yourself with others, everyone is there to help you including me.
+
+If you haven't read my previous blog, do check it out:- [**What is open source and How to repay it**](https://dev.to/byteslash/what-is-open-source-debt-and-how-to-repay-it-4a46).
+
+Have a good day,
+Rajvir Singh
+
