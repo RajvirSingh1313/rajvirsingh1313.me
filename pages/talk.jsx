@@ -7,7 +7,7 @@ export default function talk() {
       <Head>
         <title>Contact - Rajvir Singh</title>
       </Head>
-      <main className="overflow-hidden scroll-none TalkHero px-10 xl:px-24 sm:py-10 text-2xl h-screen lg:h-5/6">
+      <main className="TalkHero px-10 xl:px-24 sm:py-10 text-2xl h-full pb-32">
         <div className="w-full h-full space-y-4 flex flex-col items-center my-36 mb-40">
           <h1 className="text-activeBlue font-bold text-7xl sm:text-8xl">Lets Talk</h1>
           <h3 className="font-bold text-3xl sm:text-4xl"><span className="text-activeBlue">Email :- </span>dev.rajvirsingh1313@gmail.com</h3>

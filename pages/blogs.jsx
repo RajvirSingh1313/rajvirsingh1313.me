@@ -12,7 +12,7 @@ export default function blogs({ posts }) {
         <meta name="author" content="Rajvir Singh" />
         <meta name="keywords" content="blogs, articles, how, about, tech stacks, react, vue, electron, freelancing, freelancer developer, software developer" />
       </Head>
-      <main className="overflow-hidden scroll-none px-10 xl:px-24 sm:py-10 text-2xl w-full grid lg:grid-cols-3 gap-2">
+      <main className="pb-32 px-10 xl:px-24 sm:py-10 text-2xl w-full grid lg:grid-cols-3 gap-3">
         {posts.length > 0 ? posts.map((post, index) => (
           <Link href={'/blog/' + post.slug} passHref key={index}>
             <div className="link py-4 px-8 text-center bg-lightBlue flex flex-col justify-between items-center rounded-xl shadow-lg hover:shadow-2xl hover:bg-midBlue/30 border-2 border-lightBlue hover:border-activeBlue w-full h-full">
@@ -37,13 +37,16 @@ export default function blogs({ posts }) {
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync(path.join('posts'))
-  const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
-    const { data: frontMatter } = matter(markdownWithMeta);
+  const posts = [];
+  files.map(filename => {
+    if (!filename.startsWith('!')) {
+      const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+      const { data: frontMatter } = matter(markdownWithMeta);
 
-    return {
-      frontMatter,
-      slug: filename.split('.')[0].replaceAll(' ', '-').replaceAll('?', '!')
+      posts.push({
+        frontMatter,
+        slug: filename.split('.')[0].replaceAll(' ', '-').replaceAll('?', '!')
+      })
     }
   })
   return {
