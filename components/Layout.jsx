@@ -30,8 +30,9 @@ export default function Layout({ children }) {
                 <meta property="twitter:image" content="/OG Image.png" />
 
 
-
                 <link rel="icon" href="/favicon.ico" />
+
+                <meta name="google-site-verification" content="1EN81TY1VlquZEMlgq-vWfto5P6x6csAdy74509u8W8" />
             </Head>
 
             <Navbar />
