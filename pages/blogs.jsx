@@ -14,7 +14,7 @@ export default function blogs({ posts }) {
       </Head>
       <main className="pb-32 px-10 xl:px-24 sm:py-10 text-2xl w-full grid lg:grid-cols-3 gap-3">
         {posts.length > 0 ? posts.map((post, index) => (
-          <Link href={'/blog/' + post.slug} passHref key={index}>
+          <Link href={'/blogs/' + post.slug} passHref key={index}>
             <div className="link py-4 px-8 text-center bg-lightBlue flex flex-col justify-between items-center rounded-xl shadow-lg hover:shadow-2xl hover:bg-midBlue/30 border-2 border-lightBlue hover:border-activeBlue w-full h-full">
               <h3 className="text-white/50 text-lg">{post.frontMatter.date}</h3>
               <p className="text-activeBlue text-3xl font-bold break-words">{post.frontMatter.title}</p>
